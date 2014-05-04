@@ -1,5 +1,4 @@
-# ZSH Theme - Preview: http://dl.dropbox.com/u/4109351/pics/gnzh-zsh-theme.png
-# Based on bira theme
+# Based on gnzh/muse themes
 
 # load some modules
 autoload -U colors zsh/terminfo # Used in the colour alias below
@@ -67,6 +66,9 @@ local git_branch='%{$GIT_PROMPT_INFO%}$(git_prompt_info)%{$GIT_DIRTY_COLOR%}$(gi
 PROMPT="%{$PROMPT_SUCCESS_COLOR%}╭─%{$reset_color%}${user_host} ${current_dir} ${rvm_ruby} ${git_branch}
 %{$PROMPT_SUCCESS_COLOR%}╰─$PR_PROMPT%{$reset_color%} "
 RPS1="${return_code}"
+#RPROMPT='%{$fg_bold[green]%}%*%{$reset_color%}'
+RPROMPT='%{$fg_bold[green]%}$(date +"%l:%M:%S %p")%{$reset_color%}'
+
 
 #ZSH_THEME_GIT_PROMPT_PREFIX="%{$PR_YELLOW%}‹"
 #ZSH_THEME_GIT_PROMPT_SUFFIX="› %{$PR_NO_COLOR%}"
