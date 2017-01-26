@@ -41,7 +41,7 @@ fi
 if [[ -n "$SSH_CLIENT"  ||  -n "$SSH2_CLIENT" ]]; then
   eval PR_HOST='${PR_YELLOW}%M${PR_NO_COLOR}' #SSH
 else
-  eval PR_HOST='${PR_MAGENTA}%M${PR_NO_COLOR}' # no SSH
+  eval PR_HOST='${PR_MAGENTA}%m${PR_NO_COLOR}' # no SSH
 fi
 
 local return_code="%(?..%{$PR_RED%}%? ↵%{$PR_NO_COLOR%})"
